@@ -1,0 +1,13 @@
+---
+layout: layouts/base.vto
+title: Blog
+---
+
+<div class="">
+    <h1>Blog</h1>
+    <ul>
+        {{ for page of search.pages('type=post') }}
+        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+        {{ /for }}
+    </ul>
+</div>

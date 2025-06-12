@@ -1,0 +1,34 @@
+---
+layout: layouts/base.vto
+---
+
+<div class="flex gap-8">
+    <div class="p-8 bg-white rounded-lg w-fit">
+        <header class="mb-8">
+            <ul class="flex flex-wrap gap-4 ">
+                {{ for tag of tags }}
+                <li class="bg-gray-200 px-2 rounded">
+                    <a href="/blog/tag/{{ tag }}/"># {{ tag }}</a>
+                </li>
+                {{ /for }}
+            </ul>
+        </header>
+        <article class="prose sm:prose-sm lg:prose-lg xl:prose-xl w-screen">
+            {{ content }}
+        </article>
+    </div>
+    <aside class="hidden xl:block">
+        {{ if toc.length }}
+        <nav class="p-8 bg-white rounded-lg w-48">
+            <div class="font-bold">TOC</div>
+            <ul>
+                {{ for c of toc }}
+                <li>
+                    <a href="{{ c.slug }}">{{ c.text }}</a>
+                </li>
+                {{ /for }}
+            </ul>
+        </nav>
+        {{ /if }}
+    </aside>
+</div>

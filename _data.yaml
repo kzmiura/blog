@@ -1,0 +1,7 @@
+layout: layouts/base.vto
+lang: ja
+
+meta:
+  lang: =lang
+  title: =title
+  site: Self-Executing Anonymous Function

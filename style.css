@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+
+/* insert-theme-here */
+
+pre code.hljs {
+    display: initial;
+    overflow-x: initial;
+    padding: initial;
+}
+
+.hljs {
+    background: initial;
+}
